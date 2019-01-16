@@ -1,2 +1,2 @@
-# NewApp
+# NewsApp
 on React Native
