@@ -1,5 +1,5 @@
 import React from 'react'
-// import Router from './src/navigation'
+import Router from './src/navigation'
 import  {Font} from 'expo'
 
 //COMPONENT
@@ -34,7 +34,7 @@ export default class App extends React.Component{
     return(
       <Provider store = {store}>
         <Holder isLoading={!this.state.fontLoaded}>
-          {/* <Router/> */}
+          <Router/>
         </Holder>
       </Provider>
     )
