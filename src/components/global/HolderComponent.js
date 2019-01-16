@@ -5,6 +5,7 @@ import {
     ActivityIndicator
 } from 'react-native'
 
+
 type HolderProps = {
     isLoading: boolean,
     children?: any,
