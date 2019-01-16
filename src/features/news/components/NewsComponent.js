@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import { Constants } from 'expo'
 
-export default class NewsComponent extends Component{
+export default class NewsComponent extends Component<{}>{
     render(){
         return(
             <View>

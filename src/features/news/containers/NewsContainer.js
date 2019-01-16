@@ -4,7 +4,7 @@ import NewsComponent from '../components/NewsComponent'
 
 import { connect } from 'react-redux'
 
-class NewsContainer extends Component{
+class NewsContainer extends Component<{}>{
     render(){
         return(
             <Holder isLoading={false}>
