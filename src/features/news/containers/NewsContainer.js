@@ -5,6 +5,7 @@ import Holder from '../../../components/global/HolderComponent'
 import ErrorComponent from '../../../components/status/ErrorComponent'
 import EmptyComponent from '../../../components/status/EmptyComponent'
 import NewsComponent from '../components/NewsComponent'
+import HeaderComponent from '../components/HeaderComponent'
 
 import {onNewsFetching} from '../actions/NewsAction'
 
@@ -26,6 +27,7 @@ class NewsContainer extends Component<{}>{
         console.log(this.props.newsReducer)
         return(
             <Holder isLoading={newsLoading}>
+                <HeaderComponent />
                 {output}
             </Holder>
         )
