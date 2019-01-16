@@ -18,7 +18,7 @@ class Holder extends React.Component<HolderProps> {
                 {
                     this.props.isLoading 
                     ?   <View style = {styles.innerHolder}>
-                            <ActivityIndicator size="large" color={'blue'} />
+                            <ActivityIndicator size="large" color={'red'} />
                         </View>
                     :   this.props.children
                 }
