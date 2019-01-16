@@ -5,15 +5,45 @@ import Holder from '../../../components/global/HolderComponent'
 import ErrorComponent from '../../../components/status/ErrorComponent'
 import EmptyComponent from '../../../components/status/EmptyComponent'
 import NewsComponent from '../components/NewsComponent'
-import HeaderComponent from '../components/HeaderComponent'
+import HeaderTitle from '../components/HeaderTitle'
+import HeaderSearch from '../components/HeaderSearch'
 
 import {onNewsFetching} from '../actions/NewsAction'
 
 
 class NewsContainer extends Component<{}>{
+    static navigationOptions = ({ navigation }) => {
+        return {
+            headerStyle: {
+                backgroundColor: 'white',
+            },
+            headerLeft: <HeaderTitle/>,
+            headerRight: (
+               <HeaderSearch
+               onSearch = {navigation.getParam('_search_friends')}
+               onClear = {navigation.getParam('_clear_firends')}
+               />
+            ),
+        };
+    };
+
     componentDidMount(){
         this.props.on_news_fetching('game')
+        this.props.navigation.setParams({ 
+            _search_friends: this._search_friends,
+            _clear_firends: this._clear_firends ,
+        });
     }
+
+    _search_friends = (searchText)=>{
+        this.props.on_news_fetching(searchText)
+    }
+
+    _clear_firends = ()=>{
+
+    }
+
+
     render(){
         let {newsLoading, news, isError} = this.props.newsReducer
         let output = <NewsComponent news={news} navigation={this.props.navigation}/>
@@ -27,7 +57,6 @@ class NewsContainer extends Component<{}>{
         console.log(this.props.newsReducer)
         return(
             <Holder isLoading={newsLoading}>
-                <HeaderComponent />
                 {output}
             </Holder>
         )

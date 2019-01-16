@@ -16,10 +16,10 @@ class Holder extends React.Component<HolderProps> {
     render(){
         return(
             <View style = {styles.holder}>
-               <StatusBar
+               {/* <StatusBar
                     backgroundColor="blue"
                     hidden = {true}
-                />
+                /> */}
                 {
                     this.props.isLoading 
                     ?   <View style = {styles.innerHolder}>
