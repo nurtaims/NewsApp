@@ -1,9 +1,11 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation'
+import { createAppContainer, createStackNavigator } from 'react-navigation'
 import NewsContainer from '../features/news/containers/NewsContainer'
+import DetailsContainer from '../features/news/containers/DetailsContainer'
 
-const switchNav = createSwitchNavigator(
+const switchNav = createStackNavigator(
     {
-        news: NewsContainer
+        news: NewsContainer,
+        detail: DetailsContainer
     },
     {
         initialRouteName: 'news'

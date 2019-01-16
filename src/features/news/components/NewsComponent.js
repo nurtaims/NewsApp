@@ -3,9 +3,11 @@ import { StyleSheet, View, Text, PixelRatio, ScrollView } from 'react-native'
 import TitleComponent from '../../../components/articles/TitleComponent'
 
 export default class NewsComponent extends Component<{}>{
+    onClick = (index) => {
+        this.props.navigation.navigate('detail', { 'news': this.props.news[index] })
+    }
     render(){
         let {news} = this.props 
-        console.log(news[0])
         return(
             <ScrollView style={{backgroundColor:'#fff'}} style={styles.titleView}>
             {
@@ -14,10 +16,12 @@ export default class NewsComponent extends Component<{}>{
                         <View style={styles.sourceView}>
                             <Text style={styles.source}>{item.source.name}</Text>
                         </View>
-                        <TitleComponent 
+                        <TitleComponent
+                            index = {index}
                             title={item.title}
                             publishedAt={item.publishedAt}
                             fontSize={PixelRatio.getPixelSizeForLayoutSize(7)}
+                            onClick = {this.onClick}
                         />
                     </View>
                 ))

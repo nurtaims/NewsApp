@@ -7,7 +7,7 @@ export default class TitleComponent extends Component{
             <View style={styles.container}>
                 <TouchableOpacity
                     style={styles.titleView}
-                    onPress={()=>console.log("News")}
+                    onPress={()=>this.props.onClick(this.props.index)}
                 >
                     <Text style={[styles.title,{fontSize:this.props.fontSize}]}>{this.props.title}</Text>
                 </TouchableOpacity>

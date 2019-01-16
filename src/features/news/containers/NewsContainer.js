@@ -16,7 +16,7 @@ class NewsContainer extends Component<{}>{
     }
     render(){
         let {newsLoading, news, isError} = this.props.newsReducer
-        let output = <NewsComponent news={news}/>
+        let output = <NewsComponent news={news} navigation={this.props.navigation}/>
         if(!newsLoading && news.length === 0){
             output = <EmptyComponent/>
         }
