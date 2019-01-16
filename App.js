@@ -27,6 +27,7 @@ export default class App extends React.Component{
       'regular': require('./assets/fonts/Montserrat-Regular.ttf'),
       'light': require('./assets/fonts/Montserrat-Light.ttf'),
       'italic': require('./assets/fonts/Ubuntu-Light-Italic.ttf'),
+      'happyMonkey': require('./assets/fonts/HappyMonkey-Regular.ttf'),
     });
     this.setState({ fontLoaded: true });
   }
