@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/.*
+.*/App\.js
+.*/babel.config\.js
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+all=true
+
+[strict]
