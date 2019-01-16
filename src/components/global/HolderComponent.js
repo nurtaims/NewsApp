@@ -2,7 +2,8 @@ import React from 'react'
 import {
     View,
     StyleSheet,
-    ActivityIndicator
+    ActivityIndicator,
+    StatusBar
 } from 'react-native'
 
 
@@ -15,10 +16,14 @@ class Holder extends React.Component<HolderProps> {
     render(){
         return(
             <View style = {styles.holder}>
+               <StatusBar
+                    backgroundColor="blue"
+                    hidden = {true}
+                />
                 {
                     this.props.isLoading 
                     ?   <View style = {styles.innerHolder}>
-                            <ActivityIndicator size="large" color={'blue'} />
+                            <ActivityIndicator size="large" color={'red'} />
                         </View>
                     :   this.props.children
                 }

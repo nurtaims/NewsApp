@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, PixelRatio } from 'react-native'
+import { View, Text, StyleSheet, PixelRatio, TouchableOpacity } from 'react-native'
 
 export default class TitleComponent extends Component{
     render(){
         return(
             <View style={styles.container}>
-                <View style={styles.titleView}>
+                <TouchableOpacity
+                    style={styles.titleView}
+                    onPress={()=>console.log("News")}
+                >
                     <Text style={[styles.title,{fontSize:this.props.fontSize}]}>{this.props.title}</Text>
-                </View>
+                </TouchableOpacity>
                 <View style={styles.dateView}>
                     <Text style={styles.date}>Published at {this.props.publishedAt}</Text>
                 </View>
