@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, PixelRatio, ScrollView } from 'react-native'
+import { StyleSheet, View, Text, PixelRatio, ScrollView, TouchableOpacity } from 'react-native'
 import TitleComponent from '../../../components/articles/TitleComponent'
 
 export default class NewsComponent extends Component<{}>{
@@ -16,13 +16,17 @@ export default class NewsComponent extends Component<{}>{
                         <View style={styles.sourceView}>
                             <Text style={styles.source}>{item.source.name}</Text>
                         </View>
-                        <TitleComponent
-                            index = {index}
-                            title={item.title}
-                            publishedAt={item.publishedAt}
-                            fontSize={PixelRatio.getPixelSizeForLayoutSize(7)}
-                            onClick = {this.onClick}
-                        />
+                        <TouchableOpacity
+                            style={styles.titleView}
+                            onPress={()=>this.onClick(index)}
+                        >
+                            <TitleComponent
+                                title={item.title}
+                                publishedAt={item.publishedAt}
+                                fontSize={PixelRatio.getPixelSizeForLayoutSize(7)}
+                                onClick = {this.onClick}
+                            />
+                        </TouchableOpacity>
                     </View>
                 ))
             }
@@ -36,7 +40,6 @@ const styles = StyleSheet.create({
     titleView: {
         width:'95%',
         marginLeft:'2.5%',
-        marginTop: "2%",
     },
     source: {
         fontFamily: 'georgia',
