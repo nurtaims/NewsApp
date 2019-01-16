@@ -57,9 +57,9 @@ export default class NewsComponent extends Component<{}>{
                         </View>
                     </View>
                 }
-
-
-
+                <View style={{alignItems:'center',width:'95%',marginLeft:'2.5%'}}>
+                    
+                </View>
             </View>
         )
     }
