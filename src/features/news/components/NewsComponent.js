@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, PixelRatio, TextInput } from 'react-native'
 import { Constants } from 'expo'
 import { Button } from 'react-native-elements'
 
-export default class NewsComponent extends Component{
+export default class NewsComponent extends Component<{}>{
     constructor(props){
         super(props)
         this.state = {
