@@ -1,11 +1,13 @@
 [ignore]
 .*/node_modules/.*
+.*/reducers/.*
 .*/App\.js
 .*/babel.config\.js
 
 [include]
 
 [libs]
+
 
 [lints]
 
