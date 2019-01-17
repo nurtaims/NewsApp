@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, PixelRatio, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, PixelRatio } from 'react-native'
 
 export default class TitleComponent extends Component{
     render(){
         return(
             <View style={styles.container}>
-                <TouchableOpacity
-                    style={styles.titleView}
-                    onPress={()=>console.log("News")}
-                >
-                    <Text style={[styles.title,{fontSize:this.props.fontSize}]}>{this.props.title}</Text>
-                </TouchableOpacity>
+                <Text style={[styles.title,{fontSize:this.props.fontSize}]}>{this.props.title}</Text>
                 <View style={styles.dateView}>
                     <Text style={styles.date}>Published at {this.props.publishedAt}</Text>
                 </View>
@@ -24,9 +19,6 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#C0C0C0',
         paddingBottom: '4%'
-    },
-    titleView:{
-        marginTop: '2%'
     },
     title: {
         fontFamily: 'georgia',
