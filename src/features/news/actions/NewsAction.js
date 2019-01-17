@@ -19,7 +19,7 @@ function onNewsFetchingFulfilled(obj){
 export async function onNewsFetching(text = 'kz'){
     return async (dispatch, getState)=>{
         dispatch(onNewsFetchingPending())
-        let URL = "https://newsapi.org/v2/everything?q=sport&apiKey=5518d5c0108843e8b0efa99e385e8c91"
+        let URL = "https://newsapi.org/v2/everything?q="+text+"&apiKey=5518d5c0108843e8b0efa99e385e8c91"
         let news_obj = {
             news: [],
             newsLoading: false,
@@ -27,10 +27,10 @@ export async function onNewsFetching(text = 'kz'){
         }
         try{
             let result = await Axios.get(URL)
-            console.log('ACTION_NEWS_SUCCESS',result.data)
+            // console.log('ACTION_NEWS_SUCCESS',result.data)
             news_obj.news = result.data.articles
         }catch(error){
-            console.log('ACTION_NEWS_ERROR', error)
+            // console.log('ACTION_NEWS_ERROR', error)
             news_obj.isError = true
         }
 

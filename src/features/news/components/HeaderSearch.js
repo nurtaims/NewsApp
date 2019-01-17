@@ -85,15 +85,17 @@ const styles = StyleSheet.create({
     inpContStyle: {
         // borderWidth: 1,
         // borderColor: 'white',
-        width: w*.5,
-        borderBottomWidth:0
+        width: w*.45,
+        borderBottomWidth:0,
+        backgroundColor: '#F1F0F3',
+        borderRadius: 20,
+        paddingLeft: 10,
     },
     inputStyle:{
         borderBottomColor: 'white',
     },
     btnClear: {
-        padding: 5,
-        paddingRight: 10,
-        borderRadius: 50,
+        paddingRight: 5,
+        borderRadius: 40,
     }
 })
