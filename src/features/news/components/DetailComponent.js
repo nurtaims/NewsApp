@@ -22,9 +22,9 @@ export default class DetailComponent extends Component{
                         <TitleComponent
                             title={news.title}
                             publishedAt={news.publishedAt}
-                            fontSize={PixelRatio.getPixelSizeForLayoutSize(9)}
+                            fontSize={24}
                         />
-                        <View style={{marginTop:'2%'}}>
+                        <View style={{marginTop:10}}>
                             <Text style={styles.content}>{news.content}</Text>
                         </View>
                     </View>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     content:{
         fontFamily: 'georgia',
-        fontSize: PixelRatio.getPixelSizeForLayoutSize(6),
-        color: '#808080'
+        fontSize: 16,
+        color: '#7A7A7A'
     }
 })

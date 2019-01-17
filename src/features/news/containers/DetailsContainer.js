@@ -6,7 +6,7 @@ import DetailComponent from '../components/DetailComponent'
 
 class NewsContainer extends Component<{}>{
     static navigationOptions = {
-        title: 'Back',
+        title: 'In detail',
     }
     render(){
         let news = this.props.navigation.getParam('news')

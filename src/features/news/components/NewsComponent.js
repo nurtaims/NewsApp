@@ -20,7 +20,7 @@ export default class NewsComponent extends Component<{}>{
             <View style={styles.holder}>
             {
                 news.map((item,index) => (
-                    <View key={index}>
+                    <View key={index} style={styles.titleHolder}>
                         <View style={styles.sourceView}>
                             <Text style={[styles.source, {color: getColor(),}]}>{item.source.name.toUpperCase()}</Text>
                         </View>
@@ -58,5 +58,9 @@ const styles = StyleSheet.create({
     },
     sourceView:{
         marginTop: 15,
+    },
+    titleHolder:{
+        borderBottomWidth: 1,
+        borderBottomColor: 'rgba(0,0,0,0.1)'
     }
 })
