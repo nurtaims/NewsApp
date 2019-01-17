@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         borderBottomWidth:0,
         backgroundColor: '#F1F0F3',
         borderRadius: 20,
-        paddingLeft: 10,
+        paddingLeft: 15,
     },
     inputStyle:{
         borderBottomColor: 'white',

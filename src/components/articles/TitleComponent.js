@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
         fontSize: PixelRatio.getPixelSizeForLayoutSize(5)
     },
     dateView:{
-        marginTop: '2%'
+        marginTop: 10,
     }
 })
